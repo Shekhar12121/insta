@@ -1,0 +1,54 @@
+<div [hidden] = "displayFlag">
+  <form #f="ngForm" (ngSubmit)="logForm()">
+    <div class="all container">
+        <div class="instagram row">
+            <div  class="m-auto">
+                <p class="m-0">
+                    English (United States)^
+                </p>
+            </div>
+            <div class="logo">
+                <img src="assets/inLogo.png"
+                    alt="" />
+            </div>
+            <div class="inputlar">
+                <div class="col-sm mb-2">
+                    <input #userName type="text" placeholder="Phone number, username, or email"
+                        name="username" [(ngModel)] = "user['username']" required/>
+                </div>
+                <div class="col-sm">
+                    <input type="Password" placeholder="password" name="userpass"
+                    [(ngModel)] = "user['userpass']" required/>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <button [ngClass]="{'low-opac': !f.form.valid}" [disabled]="!f.form.valid" type="submit">Log In</button>
+             </div> <!-- button end here -->
+
+
+             <div class="m-auto w-100">
+                <small class="greyKar">Forget your login details?</small>
+                 <span class="changeColor"> Get help sign In</span>
+
+             </div>
+             <div class="m-auto">
+                <small class="logIn"> Log in with Facebook</small>
+             </div>
+
+
+            <div class="kayit">
+                Don't have an account? <a href="#"> Sign up</a>
+            </div>
+            <div class="oryantal"></div>
+            <div class="d-block m-auto mb-4 w-100">from</div>
+            <div class="l-space m-auto">Facebook</div>
+        </div>
+    </div>
+
+</form>
+</div>
+
+
+<app-picture [hidden]="!displayFlag"></app-picture>

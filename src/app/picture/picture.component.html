@@ -1,0 +1,38 @@
+<div class="container-fluid">
+
+  <input type="file" #fileInput [hidden]="true" multiple (change)="detectFiles($event)">
+  <button type="button"  [hidden]="true" (click)="fileInput.click()" class="gradient-button">Upload</button>
+
+
+
+
+      <div class="row space-between v-align" [ngClass]="{'active': activeKardo}">
+          <div *ngFor="let item of product; let i = index" [attr.data-index]="i" class="snip1295 hero-btn mt-4 mb-4"
+           (mouseenter) ="addClassInFig()">
+            <img class="col-sm-6 col-md-2 col-12" src='assets/swap.jpg' alt="sample67"/>
+            <span class='particles-circle' *ngFor="let item of Arr(num).fill(1)"></span>
+            <div class="border one">
+              <div></div>
+            </div>
+            <div class="border two">
+              <div></div>
+            </div>
+         </div>
+
+
+
+
+
+        <!-- <div class='v-align'>
+          <div class='hero-btn'>
+            <button class='btn'>
+              Click
+            </button>
+
+          </div>
+        </div> -->
+
+
+  </div>
+
+</div>

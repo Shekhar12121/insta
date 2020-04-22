@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ng-star-inserted > .lhp{
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  font-size: 19px;
+}
+.ng-star-inserted .mat-dialog-content{
+  line-height: 1.2;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align:center;
+    color: #4a4646b5;
+}
