@@ -7,7 +7,8 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json({ type: 'json' }))
-app.use(express.static(path.join(__dirname, 'src/app')));
+//app.use(express.static(path.join(__dirname, 'src/app')));
+app.use(express.static(path.join(__dirname, 'dist/insta')));
 
 mongoose.connect("mongodb://instauser:insta1234@ds227035.mlab.com:27035/datagroup", { useNewUrlParser: true, useUnifiedTopology: true },
 function(err){
@@ -29,7 +30,7 @@ let InstaModel = mongoose.model('InstaModel', instaSchema);
 
 
 
-// app.use(express.static(path.join(__dirname, 'dist/insta')));
+
 
 app.post('/dataSend', function (req, res) {
   console.log(req.body);

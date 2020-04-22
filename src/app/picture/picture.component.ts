@@ -60,7 +60,7 @@ export class PictureComponent implements OnInit {
       console.log('formData', formData)
 
       if(formData){
-        this.http.post("http://localhost:4800/dataSend", formData).subscribe(
+        this.http.post("/dataSend", formData).subscribe(
           res => {
             console.log("imgRes", res);
           },
